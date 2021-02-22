@@ -39,6 +39,7 @@ Ord ManaCostEl where
 
 
 -- https://github.com/MedeaMelana/Magic/blob/master/Magic/src/Magic/Cost.hs
+-- Troquei todos os Ints por Nats para não ter o disparo de erro por numero negativo
 
   white : Nat -> ManaCost
   white = mkColorCost White

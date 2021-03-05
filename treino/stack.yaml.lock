@@ -19,13 +19,6 @@ packages:
   original:
     hackage: text-format-0.3.2
 - completed:
-    hackage: unordered-containers-0.2.13.0@sha256:6310c636f92ed4908fdd0de582b6be31c2851c7b5f2ec14e9f416eb94df7a078,4978
-    pantry-tree:
-      size: 1388
-      sha256: 0cdd70d603c621e2b184ff7baa232af8a88a01745710b975b97df63e92c700dd
-  original:
-    hackage: unordered-containers-0.2.13.0
-- completed:
     subdir: .
     name: liquidhaskell
     version: 0.8.10.1

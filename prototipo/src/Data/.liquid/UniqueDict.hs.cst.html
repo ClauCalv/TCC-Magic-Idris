@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>/mnt/c/TCC/prototipo/src/Data/UniqueDict.hs</title>
+</head>
+<head>
+<link type='text/css' rel='stylesheet' href='liquid.css' />
+</head>
+
+<body>
+<hr>
+Put mouse over identifiers to see inferred types
+<pre><span class=hs-linenum> 1: </span><a class=annot href="#"><span class=annottext>{VV##463 : GHC.Types.Module | $k_##464}</span><span class='hs-keyword'>module</span></a> <span class='hs-conid'>Data.UniqueDict</span> <span class='hs-keyword'>where</span>
+<span class=hs-linenum> 2: </span>
+<span class=hs-linenum> 3: </span><span class='hs-keyword'>import</span> <span class='hs-keyword'>qualified</span> <span class='hs-conid'>Data.Map.Strict</span> <span class='hs-keyword'>as</span> <span class='hs-conid'>SM</span>
+<span class=hs-linenum> 4: </span><span class='hs-keyword'>import</span> <span class='hs-keyword'>qualified</span> <span class='hs-conid'>Data.IntMap.Strict</span> <span class='hs-keyword'>as</span> <span class='hs-conid'>SIM</span>
+<span class=hs-linenum> 5: </span><span class='hs-comment'>--import qualified Data.HashMap.Strict as SHM</span>
+<span class=hs-linenum> 6: </span>
+<span class=hs-linenum> 7: </span><span class='hs-comment'>-- Implementação seguindo ideia original: Par de Tuplas com acumulador</span>
+<span class=hs-linenum> 8: </span>
+<span class=hs-linenum> 9: </span><span class='hs-comment'>-- PORQUE 'IntMap' compila mas 'IntMap.IntMap' não compila dentro do LiquidHaskell?</span>
+<span class=hs-linenum>10: </span><span class='hs-comment'>-- Como forçar a invariante de que todas as keys são menores que nextKey?</span>
+<span class=hs-linenum>11: </span><span class='hs-keyword'>{-@</span> <span class='hs-keyword'>data</span> <span class='hs-conid'>UDict</span> <span class='hs-varid'>a</span> <span class='hs-keyglyph'>=</span> <span class='hs-conid'>UDict</span> <span class='hs-layout'>{</span> <span class='hs-varid'>nextKey</span> <span class='hs-keyglyph'>::</span> <span class='hs-conid'>Nat</span><span class='hs-layout'>,</span>
+<span class=hs-linenum>12: </span>                           <span class='hs-varid'>dict</span> <span class='hs-keyglyph'>::</span> <span class='hs-conid'>IntMap</span> <span class='hs-varid'>a</span><span class='hs-layout'>}</span> 
+<span class=hs-linenum>13: </span><span class='hs-keyword'>@-}</span>
+<span class=hs-linenum>14: </span><span class='hs-keyword'>data</span> <span class='hs-conid'>UDict</span> <span class='hs-varid'>a</span> <span class='hs-keyglyph'>=</span> <span class='hs-conid'>UDict</span> <span class='hs-conid'>Int</span> <span class='hs-layout'>(</span><span class='hs-conid'>SIM.IntMap</span> <span class='hs-varid'>a</span><span class='hs-layout'>)</span>
+<span class=hs-linenum>15: </span>
+<span class=hs-linenum>16: </span><span class='hs-comment'>--empty :: UDict a</span></pre>
+</body>
+</html>

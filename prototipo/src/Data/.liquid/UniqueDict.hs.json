@@ -1,0 +1,1 @@
+{"status":"safe","types":{"1":{"1":{"ann":"GHC.Types.Module","ident":"Data.UniqueDict.$trModule","row":1,"col":1}}},"sptypes":[{"start":{"line":1,"column":1},"ann":"GHC.Types.Module","ident":"Data.UniqueDict.$trModule","stop":{"line":1,"column":1}}],"errors":[]}

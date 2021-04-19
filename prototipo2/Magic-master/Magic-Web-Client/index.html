@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html ng-app="magicApp">
+
+<head>
+<title>Magic: The Haskelling</title>
+<script src="angular.min.js"></script>
+<script src="angular-ui.min.js"></script>
+<script src="magic.js"></script>
+<link rel="stylesheet" href="magic.css">
+</head>
+
+<body>
+
+<div ng-controller="MagicCtrl">
+
+  <form ng-submit="sendMessage()">
+    <input type="text" ng-model="message" size="30" autofocus>
+    <input type="submit" value="send">
+  </form>
+
+  <header>Players:</header>
+  <ul>
+    <li ng-repeat="p in world.players.order" class="activePlayer-{{p == world.activePlayerId}}">
+      Player {{p}} ({{world.players[p].life}} life)
+    </li>
+  </ul>
+
+  <dl>
+    <dt>Active step:</dt>
+    <dd>{{describeActiveStep()}}</dd>
+  </dl>
+
+  <header>Their hand:</header>
+  <ul class="their-hand">
+    <li ng-repeat="i in world.players[1].hand.order" class="card choice-{{isCardClickable({ zone: { name : 'hand', playerId : 1 }, objectId: i })}}" ng-click="clickCard({ zone: { name : 'hand', playerId : 1 }, objectId: i })">
+      {{world.players[1].hand[i].name}}
+      <span ng-show="world.players[1].hand[i].pt" class="pt">
+        {{world.players[1].hand[i].pt.power}}/{{world.players[1].hand[i].pt.toughness}}
+      </span>
+    </li>
+  </ul>
+
+  <header>My hand:</header>
+  <ul class="my-hand">
+    <li ng-repeat="i in world.players[0].hand.order" class="card choice-{{isCardClickable({ zone: { name : 'hand', playerId : 0 }, objectId: i })}}" ng-click="clickCard({ zone: { name : 'hand', playerId : 0 }, objectId: i })">
+      {{world.players[0].hand[i].name}}
+      <span ng-show="world.players[0].hand[i].pt" class="pt">
+        {{world.players[0].hand[i].pt.power}}/{{world.players[0].hand[i].pt.toughness}}
+      </span>
+    </li>
+  </ul>
+
+  <p>Question for player {{playerIdToAnswer}}: {{question.type}}?</p>
+
+  <button ui-if="question.type == 'keepHand'" ng-click="answer(0)">yes</button>
+  <button ui-if="question.type == 'keepHand'" ng-click="answer(1)">no</button>
+  <button ui-if="question.type == 'priorityAction'" ng-click="answer(0)">pass</button>
+
+</div>
+
+</body>
+
+</html>

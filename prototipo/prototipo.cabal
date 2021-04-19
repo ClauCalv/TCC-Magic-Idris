@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9fae8487651f9fa5b15029bfc776c01fa82c3c0c4ee00f0da66785042a7c3eca
+-- hash: 1bbd60f761bb0face9864044b95f1a79b65a53c9bb056e704e3e8638a4b83ce0
 
 name:           prototipo
 version:        0.1.0.0
@@ -27,9 +27,18 @@ source-repository head
 
 library
   exposed-modules:
-      Data.UniqueDict
-      IDs
       Lib
+      Magic.Data.UniqueDict
+      Magic.Types.Abilities
+      Magic.Types.Events
+      Magic.Types.Mana
+      Magic.Types.Objects.Object
+      Magic.Types.Objects.ObjectProperties
+      Magic.Types.Objects.ObjectTypes
+      Magic.Types.Player
+      Magic.Types.References
+      Magic.Types.TurnStructure
+      Magic.Types.World
   other-modules:
       Paths_prototipo
   hs-source-dirs:

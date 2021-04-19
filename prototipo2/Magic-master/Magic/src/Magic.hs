@@ -1,0 +1,35 @@
+module Magic (
+    module Magic.Abilities,
+    module Magic.Combat,
+    module Magic.Core,
+    module Magic.Cost,
+    module Magic.Engine,
+    module Magic.Events,
+    module Magic.Labels,
+    module Magic.Layers,
+    module Magic.Monads,
+    module Magic.Object,
+    module Magic.ObjectTypes,
+    module Magic.Predicates,
+    module Magic.Some,
+    module Magic.Target,
+    module Magic.Utils,
+    module Magic.World
+  ) where
+
+import Magic.Abilities
+import Magic.Combat
+import Magic.Core
+import Magic.Cost
+import Magic.Engine
+import Magic.Events
+import Magic.Labels
+import Magic.Layers
+import Magic.Monads
+import Magic.Object
+import Magic.ObjectTypes
+import Magic.Predicates
+import Magic.Some
+import Magic.Target
+import Magic.Utils
+import Magic.World

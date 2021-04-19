@@ -1,4 +1,4 @@
-module Data.UniqueDict where
+module Magic.Data.UniqueDict where
 
 import qualified Data.Map.Strict as SM
 --import qualified Data.IntMap.Strict as SIM
@@ -138,8 +138,9 @@ map f (UDict n xs) = UDict n (SM.mapWithKey f xs)
 -- Como garantir que ela é monotônica, i.e. 'x < y => f x < fy'? Ex. '\x -> x*2 + 3'
 -- '{f : (ID -> ID) | forall a b. a < b => f a < f b}' ?
 -- Quais são as pós-condições de 'v'? Além de 'size v = size x'?
-{-@ type Monotonic a = { f : (a -> a) | replaceMe f } @-}
-{-@ mapKeys :: f : Monotonic ID -> x : UDict a -> {v : UDict a | replaceMe v} @-}
+-- {-@ type Monotonic a = M (x :: {f : (a -> a) | replaceMe f }) @-}
+-- {-@ mapKeys :: f : Monotonic ID -> x : UDict a -> {v : UDict a | replaceMe v} @-}
+{-@ mapKeys :: f : (ID -> ID) -> x : UDict a -> {v : UDict a | replaceMe v} @-}
 mapKeys :: (ID -> ID) -> UDict a -> UDict a
 mapKeys f (UDict next xs) = UDict (f next) (SM.mapKeysMonotonic f xs)
 

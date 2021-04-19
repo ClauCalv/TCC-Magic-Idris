@@ -8,4 +8,13 @@
   * https://hackage.haskell.org/package/liquid-containers-0.6.2.1/docs/Data-Map-Strict.html
   * https://github.com/ucsd-progsys/liquidhaskell/blob/develop/liquid-containers/src/Data/Map/Strict.hs
 - Mas o link mais útil pra tirar dúvidas de sintaxe é: http://ucsd-progsys.github.io/liquidhaskell/specifications/
-- Não consegui trabalhar mais no TCC nessa semana por motivos pessoais. Vou tentar mexer um pouco mais neste fim de semana antes da reunião.
+
+# Mudanças 19/04
+
+- Criei o projeto do zero pra construir de pouco em pouco, no prototipo2
+- O código em Lib está bem comentadinho e rodando
+- Estudei essas semanas MTL, Control.Operational, e Optics
+- Aqui está o link do vídeo sobre optics
+  * https://www.youtube.com/watch?v=geV8F59q48E&list=PLTx-VKTe8yLwhIKMITMg2SP3SC4-oG70N
+- Falando nisso aquele vídeo de GADTs e LiquidHaskell era decepcionante. Mas acho esses links aqui também promissores e vou ver essa semana: (vou acrescentando)
+  * https://www.cs.cmu.edu/~rwh/theses/okasaki.pdf

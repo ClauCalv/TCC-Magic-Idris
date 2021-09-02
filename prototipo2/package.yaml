@@ -24,6 +24,7 @@ dependencies:
 - text
 - mtl
 - operational
+- optics
 
 library:
   source-dirs: src

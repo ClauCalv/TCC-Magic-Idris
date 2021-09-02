@@ -1,6 +1,8 @@
 module Main where
 
-import Lib
+--import V1.Lib
+
+import Server
 
 main :: IO ()
 main = playGame

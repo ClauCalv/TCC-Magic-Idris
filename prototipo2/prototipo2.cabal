@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 56b3d7929199546a460ec142e219fa18641abdab41d081bba05a01144837449c
+-- hash: 3778551d3c88cf8272a82faea1cdbd78bb2dc6275af7793640708f8a937cd719
 
 name:           prototipo2
 version:        0.1.0.0
@@ -27,8 +27,11 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
-      World1
+      Data.Dict
+      Game
+      Server
+      Types.ControlInterface
+      Types.World1
   other-modules:
       Paths_prototipo2
   hs-source-dirs:
@@ -37,6 +40,7 @@ library
       base >=4.7 && <5
     , mtl
     , operational
+    , optics
     , text
   default-language: Haskell2010
 
@@ -51,6 +55,7 @@ executable prototipo2-exe
       base >=4.7 && <5
     , mtl
     , operational
+    , optics
     , prototipo2
     , text
   default-language: Haskell2010
@@ -67,6 +72,7 @@ test-suite prototipo2-test
       base >=4.7 && <5
     , mtl
     , operational
+    , optics
     , prototipo2
     , text
   default-language: Haskell2010
